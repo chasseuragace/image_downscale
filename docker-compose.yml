@@ -1,0 +1,11 @@
+
+
+version: '3.8'
+
+services:
+  image-compressor:
+    build: .
+    volumes:
+      - ./input_images:/input_images
+      - ./output_images:/output_images
+    command: ["python", "main.py"]
